@@ -196,7 +196,6 @@
 					<condition var1="aroma_help" var2="1"/>
 					<icon res="bs_adv_aroma"/>
 					<action function="queueclear"/>
-					<action function="set">fox_install_built_in_zip=1</action>
 					<action function="set">tw_signed_zip_verify_tmp=%tw_signed_zip_verify%</action>
 					<action function="set">tw_signed_zip_verify=0</action>
 					<action function="set">fox_inject_after_zip_tmp=%fox_inject_after_zip%</action>
@@ -205,6 +204,7 @@
 					<action function="set">tw_screen_timeout_secs=0</action>
 					<action function="set">tw_filename=%aroma_fm_zip%</action>
 					<action function="set">qcount_temp=1</action>
+					<action function="set">fox_install_built_in_zip=1</action>
 					<action function="queuezip"/>
 					<action function="flash">aroma_busy</action>
 				</listitem>
@@ -289,6 +289,7 @@
 				<action function="set">tw_filename=/FFiles/OF_Del_Survival/OF_Del_Survival.zip</action>
 				<action function="set">tw_filecheck=%tw_filename%</action>
 				<action function="set">tw_zip_location=/FFiles/OF_Del_Survival</action>
+				<action function="set">fox_install_built_in_zip=1</action>
 				<action function="queuezip"/>
 				<action function="set">tw_notexistpage=fox_modules_confirm</action>
 				<action function="set">tw_existpage=fox_modules_confirm</action>
@@ -305,6 +306,7 @@
 				<action function="set">tw_filename=%fox_home_files%/%fox_magisk_zip_installer%</action>
 				<action function="set">tw_filecheck=%tw_filename%</action>
 				<action function="set">tw_zip_location=%fox_home_files%</action>
+				<action function="set">fox_install_built_in_zip=1</action>
 				<action function="queuezip"/>
 				<action function="set">tw_notexistpage=fox_modules_confirm</action>
 				<action function="set">tw_existpage=fox_modules_confirm</action>
@@ -321,6 +323,7 @@
 				<action function="set">tw_filename=%fox_home_files%/%fox_magisk_uninstaller%</action>
 				<action function="set">tw_filecheck=%tw_filename%</action>
 				<action function="set">tw_zip_location=%fox_home_files%</action>
+				<action function="set">fox_install_built_in_zip=1</action>
 				<action function="queuezip"/>
 				<action function="set">tw_notexistpage=fox_modules_confirm</action>
 				<action function="set">tw_existpage=fox_modules_confirm</action>
@@ -337,6 +340,7 @@
 				<action function="set">tw_filename=/FFiles/OF_reset/OF_reset.zip</action>
 				<action function="set">tw_filecheck=%tw_filename%</action>
 				<action function="set">tw_zip_location=/FFiles/OF_reset</action>
+				<action function="set">fox_install_built_in_zip=1</action>
 				<action function="queuezip"/>
 				<action function="set">tw_notexistpage=fox_modules_confirm</action>
 				<action function="set">tw_existpage=fox_modules_confirm</action>
@@ -354,6 +358,7 @@
 				<action function="set">tw_filename=/FFiles/OF_DelPass/OF_DelPass.zip</action>
 				<action function="set">tw_filecheck=%tw_filename%</action>
 				<action function="set">tw_zip_location=/FFiles/OF_DelPass</action>
+				<action function="set">fox_install_built_in_zip=1</action>
 				<action function="queuezip"/>
 				<action function="set">tw_notexistpage=fox_modules_confirm</action>
 				<action function="set">tw_existpage=fox_modules_confirm</action>
@@ -404,6 +409,7 @@
 					<action function="set">tw_filename=/FFiles/OF_backup_settings/OF_backup_settings.zip</action>
 					<action function="set">tw_filecheck=%tw_filename%</action>
 					<action function="set">tw_zip_location=/FFiles/OF_backup_settings</action>
+					<action function="set">fox_install_built_in_zip=1</action>
 					<action function="queuezip"/>
 					<action function="set">tw_notexistpage=fox_modules_confirm</action>
 					<action function="set">tw_existpage=fox_modules_confirm</action>
@@ -438,6 +444,7 @@
 					<action function="set">tw_filename=/FFiles/OF_DelFiles/OF_DelFiles.zip</action>
 					<action function="set">tw_filecheck=%tw_filename%</action>
 					<action function="set">tw_zip_location=/FFiles/OF_DelFiles</action>
+					<action function="set">fox_install_built_in_zip=1</action>
 					<action function="queuezip"/>
 					<action function="set">tw_notexistpage=fox_modules_confirm</action>
 					<action function="set">tw_existpage=fox_modules_confirm</action>
@@ -454,6 +461,7 @@
 					<action function="set">tw_filename=%of_initd_zip%</action>
 					<action function="set">tw_filecheck=%tw_filename%</action>
 					<action function="set">tw_zip_location=%fox_home_files%</action>
+					<action function="set">fox_install_built_in_zip=1</action>
 					<action function="queuezip"/>
 					<action function="set">tw_notexistpage=fox_modules_confirm</action>
 					<action function="set">tw_existpage=fox_modules_confirm</action>
