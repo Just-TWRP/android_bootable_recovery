@@ -76,7 +76,7 @@ LOCAL_SHARED_LIBRARIES += android.hardware.boot@1.0 \
                           android.hardware.boot@1.2 \
                           android.hardware.health@2.0 \
                           android.hardware.health@2.1 \
-                          android.hardware.health-V3-ndk \
+                          android.hardware.health-V4-ndk \
                           android.hardware.health-translate-ndk \
                           libbinder \
                           libbinder_ndk \
