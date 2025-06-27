@@ -16,17 +16,10 @@ cc_defaults {
         "libutils",
     ],
 
-    arch: {
-        arm: {
-            neon: {
-                cflags: ["-D__ARM_HAVE_NEON"],
-            },
-        },
-    },
 }
 
 cc_library_static {
-    name: "libpixelflingertwrp-arm",
+    name: "libpixelflingertwrp-arm64",
     defaults: ["libpixelflingertwrp_defaults"],
 
     srcs: [
@@ -36,12 +29,6 @@ cc_library_static {
         "trap.cpp",
         "scanline.cpp",
     ],
-
-    arch: {
-        arm: {
-            instruction_set: "arm",
-        },
-    },
 }
 
 cc_library_static {
@@ -61,21 +48,9 @@ cc_library_static {
         "raster.cpp",
         "buffer.cpp",
     ],
-    whole_static_libs: ["libpixelflingertwrp-arm"],
+    whole_static_libs: ["libpixelflingertwrp-arm64"],
 
     arch: {
-        arm: {
-            srcs: [
-                "codeflinger/ARMAssembler.cpp",
-                "codeflinger/disassem.c",
-                "col32cb16blend.S",
-                "t32cb16blend.S",
-            ],
-
-            neon: {
-                srcs: ["col32cb16blend_neon.S"],
-            },
-        },
         arm64: {
             srcs: [
                 "codeflinger/Arm64Assembler.cpp",
