@@ -122,7 +122,6 @@ cc_library_shared {
         "libvintf", 
         "libhidl-gen-utils",
         "librecovery_utils",
-        "libc++fs",
         "libprotobuf-cpp-lite",
         "ota_metadata_proto_cc",
         "update_metadata-protos"
