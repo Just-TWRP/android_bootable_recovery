@@ -35,7 +35,7 @@ constexpr const char* CACHE_ROOT = "/cache";
 constexpr const char* DATA_ROOT = "/data";
 constexpr const char* METADATA_ROOT = "/metadata";
 
-static bool EraseVolume(const char* volume, RecoveryUI* ui, std::string_view new_fstype) {
+static bool EraseVolume(const char* volume, std::string_view new_fstype) {
   LOG(INFO) << "Erasing volume " << volume << " with new filesystem type " << new_fstype;
   bool is_cache = (strcmp(volume, CACHE_ROOT) == 0);
 
@@ -62,8 +62,7 @@ static bool EraseVolume(const char* volume, RecoveryUI* ui, std::string_view new
   return (result == 0);
 }
 
-bool WipeCache(const std::function<bool()>& confirm_func,
-               std::string_view new_fstype) {
+bool WipeCache(const std::function<bool()>& confirm_func, std::string_view new_fstype) {
   bool has_cache = volume_for_mount_point("/cache") != nullptr;
   if (!has_cache) {
     // ui->Print("No /cache partition found.\n");
@@ -78,7 +77,7 @@ bool WipeCache(const std::function<bool()>& confirm_func,
   // ui->SetBackground(RecoveryUI::ERASING);
   // ui->SetProgressType(RecoveryUI::INDETERMINATE);
 
-  bool success = EraseVolume("/cache", ui, new_fstype);
+  bool success = EraseVolume("/cache", new_fstype);
   // ui->Print("Cache wipe %s.\n", success ? "complete" : "failed");
   return success;
 }
@@ -96,20 +95,24 @@ bool WipeData(Device* device, bool keep_memtag_mode, std::string_view data_fstyp
 
   bool success = device->PreWipeData();
   if (success) {
-    success &= EraseVolume(DATA_ROOT, ui, data_fstype);
+    success &= EraseVolume(DATA_ROOT, data_fstype);
     bool has_cache = volume_for_mount_point("/cache") != nullptr;
     if (has_cache) {
-      success &= EraseVolume(CACHE_ROOT, ui, data_fstype);
+      success &= EraseVolume(CACHE_ROOT, data_fstype);
     }
     if (volume_for_mount_point(METADATA_ROOT) != nullptr) {
-      success &= EraseVolume(METADATA_ROOT, ui, data_fstype);
+      success &= EraseVolume(METADATA_ROOT, data_fstype);
     }
   }
-  //ui->Print("Resetting memtag message...\n");
-  std::string err;
-  if (!WriteMiscMemtagMessage({}, &err)) {
-    //ui->Print("Failed to reset memtag message: %s\n", err.c_str());
-    success = false;
+  if (keep_memtag_mode) {
+    // ui->Print("NOT resetting memtag message as per request...\n");
+  } else {
+    // ui->Print("Resetting memtag message...\n");
+    std::string err;
+    if (!WriteMiscMemtagMessage({}, &err)) {
+      // ui->Print("Failed to reset memtag message: %s\n", err.c_str());
+      success = false;
+    }
   }
   if (success) {
     success &= device->PostWipeData();
