@@ -728,9 +728,6 @@ include $(BUILD_STATIC_LIBRARY)
 
 commands_recovery_local_path := $(LOCAL_PATH)
 
-include \
-    $(commands_TWRP_local_path)/updater/Android.mk
-
 include $(commands_TWRP_local_path)/mtp/ffs/Android.mk \
     $(commands_TWRP_local_path)/minui/Android.mk
 
