@@ -34,6 +34,7 @@ cc_defaults {
     cpp_std: "experimental",
 
     include_dirs: [
+        "bootable/recovery/otautil/include",
         "packages/modules/adb",
     ],
 
@@ -80,6 +81,7 @@ cc_library_headers {
     // adb_install.cpp
     visibility: [
         "//bootable/recovery/install",
+        "//bootable/recovery/twrpinstall",
     ],
 }
 
