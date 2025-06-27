@@ -62,7 +62,7 @@ static bool EraseVolume(const char* volume, RecoveryUI* ui, std::string_view new
   return (result == 0);
 }
 
-bool WipeCache(RecoveryUI* ui, const std::function<bool()>& confirm_func,
+bool WipeCache(const std::function<bool()>& confirm_func,
                std::string_view new_fstype) {
   bool has_cache = volume_for_mount_point("/cache") != nullptr;
   if (!has_cache) {
@@ -79,7 +79,7 @@ bool WipeCache(RecoveryUI* ui, const std::function<bool()>& confirm_func,
   // ui->SetProgressType(RecoveryUI::INDETERMINATE);
 
   bool success = EraseVolume("/cache", ui, new_fstype);
-  ui->Print("Cache wipe %s.\n", success ? "complete" : "failed");
+  // ui->Print("Cache wipe %s.\n", success ? "complete" : "failed");
   return success;
 }
 
