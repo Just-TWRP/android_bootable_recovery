@@ -470,7 +470,7 @@ static Device::BuiltinAction PromptAndWait(Device* device, InstallResult status)
         std::function<bool()> confirm_func = [&device]() {
           return yes_no(device, "Wipe cache?", "  THIS CAN NOT BE UNDONE!");
         };
-        WipeCache(ui, ui->IsTextVisible() ? confirm_func : nullptr);
+        WipeCache(ui->IsTextVisible() ? confirm_func : nullptr);
         if (!ui->IsTextVisible()) return Device::NO_ACTION;
         break;
       }
@@ -841,7 +841,7 @@ Device::BuiltinAction start_recovery(Device* device, const std::vector<std::stri
     }
   } else if (should_wipe_cache) {
     save_current_log = true;
-    if (!WipeCache(ui, nullptr, data_fstype)) {
+    if (!WipeCache(nullptr, data_fstype)) {
       status = INSTALL_ERROR;
     }
   } else if (should_wipe_ab) {
