@@ -89,17 +89,6 @@ LOCAL_SHARED_LIBRARIES += android.hardware.boot@1.0 \
                           liblz4 \
                           libprotobuf-cpp-lite \
                           libutils
-LOCAL_C_INCLUDES += \
-    system/core/fs_mgr/libfs_avb/include/ \
-    system/core/fs_mgr/include_fstab/ \
-    system/core/fs_mgr/include/ \
-    system/core/fs_mgr/libdm/include/ \
-    system/core/fs_mgr/liblp/include/ \
-    system/core/fs_mgr/ \
-    system/gsid/include/ \
-    system/core/init/ \
-    system/extras/ext4_utils/include \
-    system/vold
 
 ifneq ($(TARGET_RECOVERY_REBOOT_SRC),)
   LOCAL_SRC_FILES += $(TARGET_RECOVERY_REBOOT_SRC)
@@ -114,18 +103,10 @@ LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-function
 LOCAL_CLANG := true
 
 LOCAL_C_INCLUDES += \
-    bionic \
-    system/extras \
-    packages/modules/adb \
+    system/core/fs_mgr \
+    system/gsid/include \
     system/core/libsparse \
-    system/vold \
-    external/zlib \
-    system/libziparchive/include \
     external/freetype/include \
-    external/boringssl/include \
-    external/libcxx/include \
-    external/libselinux/include \
-    external/libpng \
     $(LOCAL_PATH)/gui/include \
     $(LOCAL_PATH)/recovery_ui/include \
     $(LOCAL_PATH)/otautil/include \
