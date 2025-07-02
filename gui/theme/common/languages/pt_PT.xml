@@ -9,7 +9,6 @@
 		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
-
 		<!-- Partition display names -->
 		<string name="system">Sistema</string>
 		<string name="system_image">Imagem do sistema</string>
@@ -31,7 +30,6 @@
 		<string name="adopted_data">Dados adoptados</string>
 		<string name="adopted_storage">Armazenamento adoptado</string>
 		<string name="autostorage">Armazenamento</string>
-
 		<!-- GUI XML strings -->
 		<string name="twrp_header">Team Win Recovery Project</string>
 		<string name="twrp_watch_header">TWRP %tw_version%</string>
@@ -50,7 +48,6 @@
 		<string name="tab_screen">ECRÃ</string>
 		<string name="tab_vibration">VIBRAÇÃO</string>
 		<string name="tab_language">IDIOMA</string>
-
 		<string name="install_btn">Instalar</string>
 		<string name="wipe_btn">Apagar</string>
 		<string name="backup_btn">Backup</string>
@@ -497,7 +494,6 @@
 		<string name="fix_recovery_loop_complete">Resolução do Bootloop da Recovery concluída</string>
 		<string name="fixing_recovery_loop_patch">A aplicar o patch ao kernel...</string>
 		<string name="fix_recovery_loop_patch_error">Erro ao aplicar o patch ao kernel.</string>
-
 		<!-- Various console messages - these consist of user displayed messages, oftentimes errors -->
 		<string name="no_kernel_selinux">O Kernel não tem suporte para leitura de contextos do SELinux.</string>
 		<string name="full_selinux">Suporte completo ao SELinux.</string>

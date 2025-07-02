@@ -9,7 +9,6 @@
 		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
-
 		<!-- Partition display names -->
 		<string name="system">Rendszer</string>
 		<string name="system_image">Rendszerkép</string>
@@ -30,7 +29,6 @@
 		<string name="sdext">SD-EXT</string>
 		<string name="adopted_data">Adoptált adatok</string>
 		<string name="adopted_storage">Adoptált tároló</string>
-
 		<!-- GUI XML strings -->
 		<string name="twrp_header">Team Win Recovery Project</string>
 		<string name="twrp_watch_header">TWRP %tw_version%</string>
@@ -49,7 +47,6 @@
 		<string name="tab_screen">KÉPERNYŐ</string>
 		<string name="tab_vibration">REZGÉS</string>
 		<string name="tab_language">NYELV</string>
-
 		<string name="install_btn">Telepítés</string>
 		<string name="wipe_btn">Törlés</string>
 		<string name="backup_btn">Biztonsági mentés</string>
@@ -465,7 +462,6 @@
 		<string name="install_cancel">Ne telepítse</string>
 		<string name="sel_storage_list">Válasszon tárolót</string>
 		<string name="ok_btn">OK</string>
-
 		<!-- Various console messages - these consist of user displayed messages, oftentimes errors -->
 		<string name="no_kernel_selinux">Kernel nem támogatja a SELinux összefüggések olvasását.</string>
 		<string name="full_selinux">Teljes SELinux támogatás jelen van.</string>

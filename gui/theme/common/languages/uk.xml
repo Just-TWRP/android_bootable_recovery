@@ -445,7 +445,6 @@
 		<string name="reboot_hdr">Перезавантаження</string>
 		<string name="install_cancel">Не встановлювати</string>
 		<string name="sel_storage_list">Вибір сховища</string>
-
 		<!-- Various console messages - these consist of user displayed messages, oftentimes errors -->
 		<string name="no_kernel_selinux">Ядро не підтримує читання SELinux контексту.</string>
 		<string name="full_selinux">Присутня повна підтримка SELinux.</string>

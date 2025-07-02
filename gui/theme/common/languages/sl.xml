@@ -9,7 +9,6 @@
 		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="90" />
 		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="90" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
-
 		<!-- Partition display names -->
 		<string name="system">Sistem</string>
 		<string name="system_image">Sistemski odtis</string>
@@ -31,7 +30,6 @@
 		<string name="adopted_data">Prevzeti podatki</string>
 		<string name="adopted_storage">Prevzeta pom. naprava</string>
 		<string name="autostorage">Shramba</string>
-
 		<!-- GUI XML strings -->
 		<string name="twrp_header">Team Win Recovery Project</string>
 		<string name="twrp_watch_header">TWRP %tw_version%</string>
@@ -50,7 +48,6 @@
 		<string name="tab_screen">ZASLON</string>
 		<string name="tab_vibration">VIBRIRANJE</string>
 		<string name="tab_language">JEZIK</string>
-
 		<string name="install_btn">Namesti</string>
 		<string name="wipe_btn">Počisti</string>
 		<string name="backup_btn">Var. kopiraj</string>
@@ -522,7 +519,6 @@
 		<string name="multiuser_warning2">Opravila var. kopiranja/obnovitve lahko spodletijo!</string>
 		<string name="multiuser_warning_accept">Vseeno nadaljuj</string>
 		<string name="multiuser_warning_hdr">Opozorilo o več uporabnikih</string>
-
 		<!-- Various console messages - these consist of user displayed messages, oftentimes errors -->
 		<string name="no_kernel_selinux">Jedro nima podpore za branje vsebin SELinux.</string>
 		<string name="full_selinux">Prisotna je polna podpora za SELinux.</string>

@@ -9,7 +9,6 @@
 		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
-
 		<!-- Nama tampilan partisi -->
 		<string name="system">Sistem</string>
 		<string name="system_image">Image Sistem</string>
@@ -31,7 +30,6 @@
 		<string name="adopted_data">Data teradopsi</string>
 		<string name="adopted_storage">Penyimpanan teradopsi</string>
 		<string name="autostorage">Penyimpanan</string>
-
 		<!-- String XML GUI -->
 		<string name="twrp_header">Team Win Recovery Project</string>
 		<string name="twrp_watch_header">TWRP %tw_version%</string>
@@ -50,7 +48,6 @@
 		<string name="tab_screen">TAMPILAN</string>
 		<string name="tab_vibration">GETAR</string>
 		<string name="tab_language">BAHASA</string>
-
 		<string name="install_btn">Instalasi</string>
 		<string name="wipe_btn">Format</string>
 		<string name="backup_btn">Cadangkan</string>
@@ -513,7 +510,6 @@
 		<string name="multiuser_warning2">Operasi pencadangan /recovery mungkin gagal!</string>
 		<string name="multiuser_warning_accept">Lanjutkan saja</string>
 		<string name="multiuser_warning_hdr">Peringatan multipengguna</string>
-
 		<!-- Berbagai pesan konsol - ini terdiri dari pesan yang ditampilkan pengguna, biasanya kesalahan -->
 		<string name="no_kernel_selinux">Kernel tidak memiliki dukungan untuk membaca konteks SELinux.</string>
 		<string name="full_selinux">Dukungan penuh SELinux aktif.</string>

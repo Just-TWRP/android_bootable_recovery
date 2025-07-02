@@ -9,7 +9,6 @@
 		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
-
 		<!-- Partition display names -->
 		<string name="system">System</string>
 		<string name="system_image">Obraz Systemu</string>
@@ -31,7 +30,6 @@
 		<string name="adopted_data">Adopted Data</string>
 		<string name="adopted_storage">Adopted Storage</string>
 		<string name="autostorage">Pamięć</string>
-
 		<!-- GUI XML strings -->
 		<string name="twrp_header">Projekt Team Win Recovery</string>
 		<string name="twrp_watch_header">TWRP %tw_version%</string>
@@ -50,7 +48,6 @@
 		<string name="tab_screen">EKRAN</string>
 		<string name="tab_vibration">WIBRACJE</string>
 		<string name="tab_language">JĘZYK</string>
-
 		<string name="install_btn">Instaluj</string>
 		<string name="wipe_btn">Wyczyść</string>
 		<string name="backup_btn">Kopia</string>
@@ -522,7 +519,6 @@
 		<string name="multiuser_warning2">Operacje tworzenia kopii zapasowej lub jej przywrócenia mogą się nie powieść!</string>
 		<string name="multiuser_warning_accept">Kontynuuj mimo to</string>
 		<string name="multiuser_warning_hdr">Ostrzeżenie dot. wielu użytkowników</string>
-
 		<!-- Various console messages - these consist of user displayed messages, oftentimes errors -->
 		<string name="no_kernel_selinux">Kernel nie posiada obsługi odczytu uprawnień SELinux.</string>
 		<string name="full_selinux">Pełna obsługa SELinux jest dostępna.</string>

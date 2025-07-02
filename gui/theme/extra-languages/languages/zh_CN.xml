@@ -9,7 +9,6 @@
 		<resource filename="NotoSansCJKsc-Regular.ttf" name="font_m" scale="100" type="fontoverride"/>
 		<resource filename="NotoSansCJKsc-Regular.ttf" name="font_s" scale="100" type="fontoverride"/>
 		<resource filename="NotoSansCJKsc-Regular.ttf" name="fixed" scale="100" type="fontoverride"/>
-
 		<!-- Partition display names -->
 		<string name="system">System</string>
 		<string name="system_image">System 镜像</string>
@@ -19,19 +18,18 @@
 		<string name="recovery">Recovery</string>
 		<string name="cache">Cache</string>
 		<string name="data">Data</string>
-		<string name="data_backup">Data（不包含存储）</string>
+		<string name="data_backup">Data（不包含内部存储空间）</string>
 		<string name="sdcard">SDCard</string>
-		<string name="internal">内部存储设备</string>
-		<string name="microsd">SD 卡</string>
-		<string name="usbotg">外置 U 盘</string>
+		<string name="internal">内部存储空间</string>
+		<string name="microsd">Micro SDCard</string>
+		<string name="usbotg">U 盘</string>
 		<string name="android_secure">Android Secure</string>
 		<string name="dalvik">Dalvik / ART Cache</string>
 		<!-- This is a rarely used partition on a Micro SD card for a very old app2sd system -->
 		<string name="sdext">SD-EXT</string>
 		<string name="adopted_data">Adopted Data</string>
-		<string name="adopted_storage">Adopted 存储</string>
-		<string name="autostorage">存储</string>
-
+		<string name="adopted_storage">Adopted 存储空间</string>
+		<string name="autostorage">存储空间</string>
 		<!-- GUI XML strings -->
 		<string name="twrp_header">Team Win Recovery Project</string>
 		<string name="twrp_watch_header">TWRP %tw_version%</string>
@@ -50,7 +48,6 @@
 		<string name="tab_screen">屏幕</string>
 		<string name="tab_vibration">振动</string>
 		<string name="tab_language">语言</string>
-
 		<string name="install_btn">安装</string>
 		<string name="wipe_btn">清除</string>
 		<string name="backup_btn">备份</string>
@@ -138,7 +135,7 @@
 		<string name="factory_reset_hdr">恢复出厂设置（双清）</string>
 		<string name="factory_reset_btn">恢复出厂</string>
 		<string name="factory_reset1">这将会清空 Data、Cache 分区和 Dalvik 缓存</string>
-		<string name="factory_reset2">（不会清除内置存储/sdcard）</string>
+		<string name="factory_reset2">（不会清除内置存储空间/ SDCard</string>
 		<string name="factory_reset3">在大多数情况下，您只需要</string>
 		<string name="factory_reset4">执行此操作即可。</string>
 		<string name="factory_reset5">（不包括用户/锁屏）</string>
@@ -160,10 +157,10 @@
 		<string name="format_data_btn">格式化 Data 分区</string>
 		<string name="format_data_ptr1">格式化 Data 分区将会清空您安装的所有</string>
 		<string name="format_data_ptr2">软件、备份、图片、媒体，</string>
-		<string name="format_data_ptr3">以及对内置存储所做的加密等。</string>
-		<string name="format_data_adopted">也包括 Adopted 存储</string>
+		<string name="format_data_ptr3">以及对内置存储空间所做的加密等。</string>
+		<string name="format_data_adopted">也包括 Adopted 存储空间</string>
 		<string name="format_data_lcp1">格式化 Data 分区将会清空您安装的所有软件、备份、图片、媒体，</string>
-		<string name="format_data_lcp2">以及对内置存储所做的加密等。</string>
+		<string name="format_data_lcp2">以及对内置存储空间所做的加密等。</string>
 		<string name="format_data_wtc1">格式化 Data 分区会清除您的所有软件</string>
 		<string name="format_data_wtc2">备份和媒体数据，无法撤销。</string>
 		<string name="format_data_undo">执行此操作后将无法恢复。</string>
@@ -182,7 +179,7 @@
 		<string name="part_removable_no">可移除：否</string>
 		<string name="part_size">大小: %tw_partition_size%MB</string>
 		<string name="part_used">已用: %tw_partition_used%MB</string>
-		<string name="part_free">空闲: %tw_partition_free%MB</string>
+		<string name="part_free">可用: %tw_partition_free%MB</string>
 		<string name="part_backup_size">备份大小: %tw_partition_backup_size%MB</string>
 		<string name="resize_btn">调整文件系统</string>
 		<string name="resize_btn_s">调整</string>
@@ -226,7 +223,7 @@
 		<string name="enable_backup_comp_chk">启用压缩</string>
 		<string name="skip_digest_backup_chk" version="2">当备份时跳过生成 Digest</string>
 		<string name="disable_backup_space_chk" version="2">在备份之前禁用剩余空间检查</string>
-		<string name="skip_digest_zip_chk">安装 ZIP 之前跳过 Digest 校验</string>
+		<string name="skip_digest_zip_chk">安装 Zip 之前跳过 Digest 校验</string>
 		<string name="current_boot_slot">当前槽位: %tw_active_slot%</string>
 		<string name="boot_slot_a">槽位 A</string>
 		<string name="boot_slot_b">槽位 B</string>
@@ -282,9 +279,9 @@
 		<string name="decrypt_data_btn">解密 Data 分区</string>
 		<string name="disable_mtp_btn">停用 MTP 模式</string>
 		<string name="enable_mtp_btn">启用 MTP 模式</string>
-		<string name="mount_usb_storage_btn">挂载 USB 存储</string>
-		<string name="usb_storage_hdr">USB 存储</string>
-		<string name="usb_stor_mnt1">已挂载 USB 存储</string>
+		<string name="mount_usb_storage_btn">挂载 USB 存储空间</string>
+		<string name="usb_storage_hdr">USB 存储空间</string>
+		<string name="usb_stor_mnt1">已挂载 USB 存储空间</string>
 		<string name="usb_stor_mnt2">请确认解除挂载前先从</string>
 		<string name="usb_stor_mnt3">电脑上安全地移除设备！</string>
 		<string name="unmount_btn">卸载</string>
@@ -355,7 +352,7 @@
 		<string name="utcp5">(UTC +5) 叶卡捷琳堡、伊斯兰堡</string>
 		<string name="utcp6">(UTC +6) 阿拉木图、达卡、科伦坡</string>
 		<string name="utcp7">(UTC +7) 曼谷、河内、雅加达</string>
-		<string name="utcp8">(UTC +8) 北京、新加坡、香港</string>
+		<string name="utcp8">(UTC +8) 北京、新加坡、香港、台湾</string>
 		<string name="utcp9">(UTC +9) 东京、首尔、雅库茨克</string>
 		<string name="utcp10">(UTC +10) 澳大利亚东部、关岛</string>
 		<string name="utcp11">(UTC +11) 符拉迪沃斯托克、索罗门群岛</string>
@@ -389,12 +386,12 @@
 		<string name="sel_lang_btn">选择语言</string>
 		<string name="set_language_btn">设置语言</string>
 		<string name="advanced_hdr">高级选项</string>
-		<string name="copy_log_confirm">是否导出日志到内置存储？</string>
+		<string name="copy_log_confirm">是否导出日志到内置存储空间？</string>
 		<string name="copying_log" version="2">正在复制…</string>
 		<string name="copy_log_complete" version="2">日志导出完成</string>
 		<string name="fix_context_btn">修复 Context</string>
-		<string name="part_sd_btn">分区 SD 卡</string>
-		<string name="part_sd_s_btn">SD 卡</string>
+		<string name="part_sd_btn">分区 SDCard</string>
+		<string name="part_sd_s_btn">SDCard</string>
 		<string name="file_manager_btn">文件管理</string>
 		<string name="language_hdr">语言</string>
 		<string name="terminal_btn">终端命令</string>
@@ -404,9 +401,9 @@
 		<string name="injecting_twrp">正在重新注入 TWRP…</string>
 		<string name="inject_twrp_complete">TWRP 注入完成</string>
 		<string name="swipe_to_confirm">滑动滑块确认</string>
-		<string name="part_sd_hdr">SD 卡分区</string>
+		<string name="part_sd_hdr">SDCard 分区</string>
 		<string name="invalid_partsd_sel">您必须选择一个可移动设备</string>
-		<string name="part_sd_lose">您将会丢失 SD 卡上的所有文件！</string>
+		<string name="part_sd_lose">您将会丢失 SDCard 上的所有文件！</string>
 		<string name="part_sd_undo">此操作无法恢复！</string>
 		<string name="part_sd_ext_sz">EXT 大小：</string>
 		<string name="part_sd_swap_sz">Swap 大小：</string>
@@ -415,7 +412,7 @@
 		<string name="file_system">文件系统：</string>
 		<string name="swipe_part_sd">滑动滑块确认分区</string>
 		<string name="swipe_part_sd_s">分区</string>
-		<string name="partitioning_sd">正在对 SD 卡分区…</string>
+		<string name="partitioning_sd">正在对 SDCard 分区…</string>
 		<string name="partitioning_sd2">这将需要几分钟的时间。</string>
 		<string name="part_sd_complete">分区完成</string>
 		<string name="swipe_to_unlock">滑动滑块解锁</string>
@@ -499,7 +496,7 @@
 		<string name="repack_overwrite_warning">如果设备之前有root权限，现在可能被覆盖，请重新获取root权限。</string>
 		<string name="reflash_twrp">刷入当前的 TWRP</string>
 		<string name="reflash_twrp_confirm">是否刷入当前的 TWRP？</string>
-		<string name="reflashing_twrp">正在刷入 TWRP...</string>
+		<string name="reflashing_twrp">正在刷入 TWRP…</string>
 		<string name="reflash_twrp_complete">TWRP 刷入完成！</string>
 		<string name="fix_recovery_loop">修复 Recovery 无限重启</string>
 		<string name="fix_recovery_loop_confirm">是否修复 Recovery 无限重启？</string>
@@ -520,7 +517,6 @@
 		<string name="multiuser_warning2">备份/还原操作可能会失败！</string>
 		<string name="multiuser_warning_accept">仍然继续</string>
 		<string name="multiuser_warning_hdr">多用户警告</string>
-
 		<!-- Various console messages - these consist of user displayed messages, oftentimes errors -->
 		<string name="no_kernel_selinux">内核不支持读取 SELinux Context。</string>
 		<string name="full_selinux">完整 SELinux 支持。</string>
@@ -577,23 +573,23 @@
 		<string name="dalvik_done">-- Dalvik 目录清除完成！</string>
 		<string name="no_andsec">未发现 android secure 分区。</string>
 		<string name="unable_to_locate">未找到 {1}。</string>
-		<string name="wiping_datamedia">清除内置存储 -- /data/media…</string>
+		<string name="wiping_datamedia">清除内置存储空间 -- /data/media…</string>
 		<string name="unable_to_mount">无法挂载 {1}</string>
-		<string name="unable_to_mount_internal">无法挂载内置存储</string>
-		<string name="unable_to_mount_storage">无法挂载存储</string>
+		<string name="unable_to_mount_internal">无法挂载内置存储空间</string>
+		<string name="unable_to_mount_storage">无法挂载存储空间</string>
 		<string name="fail_decrypt">解密数据失败。</string>
 		<string name="no_crypto_support">此版本不支持加密。</string>
 		<string name="decrypt_success_dev">Data 分区成功解密，新增块设备:“{1}”</string>
 		<string name="decrypt_success_nodev">Data 分区已成功解密</string>
 		<string name="done">完成。</string>
-		<string name="start_partition_sd">正在给 SD 卡分区…</string>
+		<string name="start_partition_sd">正在给 SDCard 分区…</string>
 		<string name="partition_sd_locate">未找到需要分区的设备。</string>
-		<string name="ext_swap_size">EXT+Swap 大小超过 SD 卡容量。</string>
+		<string name="ext_swap_size">EXT+Swap 大小超过 SDCard 容量。</string>
 		<string name="remove_part_table">正在删除分区表…</string>
 		<string name="unable_rm_part">无法删除分区表。</string>
 		<string name="create_part">正在创建 {1} 分区…</string>
 		<string name="unable_to_create_part">无法创建 {1} 分区。</string>
-		<string name="format_sdext_as">正在将 sd-ext 格式化为 {1}…</string>
+		<string name="format_sdext_as">正在将 SD-EXT 格式化为 {1}…</string>
 		<string name="part_complete">分区完成。</string>
 		<string name="unable_to_open">无法打开“{1}”。</string>
 		<string name="mtp_already_enabled">MTP 已经启用</string>
@@ -632,7 +628,7 @@
 		<string name="remove_all">移除“{1}”下的所有文件</string>
 		<string name="wiping_data">正在清除 Data 分区，跳过清除/data/media…</string>
 		<string name="backing_up">正在备份 {1}…</string>
-		<string name="backup_storage_warning">备份的 {1} 分区不包含内置存储上的任何文件，例如照片或下载的文件等等。</string>
+		<string name="backup_storage_warning">备份的 {1} 分区不包含内置存储空间上的任何文件，例如照片或下载的文件等等。</string>
 		<string name="backing">正在备份</string>
 		<string name="backup_size">“{1}”的备份文件大小为 0 字节。</string>
 		<string name="datamedia_fs_restore">警告：此/data 备份文件系统为 {1}! 除非把文件系统格式设置为 {1} 否则可能无法启动。</string>
@@ -685,7 +681,7 @@
 		<string name="pid_signal">{1} 过程结束，标志: {2}</string>
 		<string name="pid_error">{1} 过程结束，错误: {2}</string>
 		<string name="run_script">正在运行 {1} 脚本…</string>
-		<string name="rename_stock">重命名/system 下原版 Recovery 的补丁文件，避免原厂固件替换 TWRP。</string>
+		<string name="rename_stock">重命名 /system 下原版 Recovery 的补丁文件，避免原厂固件替换 TWRP。</string>
 		<string name="split_backup">分解备份文件为多个压缩文件…</string>
 		<string name="backup_error">建立备份失败。</string>
 		<string name="restore_error">在恢复过程中发生错误。</string>
@@ -705,13 +701,11 @@
 		<string name="screenshot_saved">截图已保存到：{1}</string>
 		<string name="screenshot_err">截图失败！</string>
 		<string name="zip_wipe_cache">一个或多个刷机包请求清除 Cache -- 正在清除 Cache。</string>
-		<string name="and_sec_wipe_err">无法清除 android secure</string>
+		<string name="and_sec_wipe_err">无法清除 Android Secure</string>
 		<string name="dalvik_wipe_err">清除 Dalvik 失败</string>
-		<string name="auto_gen">(Auto Generate)</string>
-		<string name="curr_date">(Current Date)</string>
 		<string name="backup_name_len">备份名称太长。</string>
 		<string name="backup_name_invalid">备份名称“{1}”中包含无效字符:“{1}”</string>
-		<string name="no_real_sdcard">此设备没有真实的 SD 卡！正在中止！</string>
+		<string name="no_real_sdcard">此设备没有真实的 SDCard！正在中止！</string>
 		<string name="cancel_sideload">取消 ADB Sideload…</string>
 		<string name="change_fs_err">更换文件系统时出错。</string>
 		<string name="theme_ver_err">自定义主题和 TWRP 版本不匹配，正在使用原版主题。</string>
@@ -719,10 +713,10 @@
 		<string name="install_reboot" version="2">将会在 %tw_sleep% 秒内重启</string>
 		<string name="adbbackup_error">ADB 备份错误。正在退出…"</string>
 		<string name="adbbackup_control_error">无法写入 adb 控制通道</string>
-		<string name="twrp_adbbu_option">启用 TWRP ADB 备份需使用 --twrp 选项</string>
+		<string name="twrp_adbbu_option">启用 TWRP ADB 备份需使用 -- TWRP 选项</string>
 		<string name="partition_not_found">分区列表中未发现路径: {1}</string>
-		<string name="copy_kernel_log">已导出 kernel 日志到 {1}</string>
-		<string name="copy_logcat">已导出 logcat 日志到 {1}</string>
+		<string name="copy_kernel_log">已导出 Kernel 日志到 {1}</string>
+		<string name="copy_logcat">已导出 Logcat 日志到 {1}</string>
 		<string name="include_kernel_log">包含 Kernel 日志</string>
 		<string name="include_logcat">包含 Logcat 日志</string>
 		<string name="sha2_chk">使用 SHA2 进行散列校验</string>
@@ -731,8 +725,8 @@
 		<string name="unmount_system">正在解除挂载 System…</string>
 		<string name="unmount_system_err">解除挂载 System 失败</string>
 		<string name="flash_ab_inactive">正在刷入 A/B Zip 刷机包至非活动槽位: {1}</string>
-		<string name="flash_ab_reboot">请重启 TWRP 切换到新槽位后，再刷入其它的 ZIP。</string>
-		<string name="flash_ab_both_slots">刷入到2个槽位</string>
+		<string name="flash_ab_reboot">请重启 TWRP 切换到新槽位后，再刷入其它的 Zip。</string>
+		<string name="flash_ab_both_slots">刷入到 2 个槽位</string>
 		<string name="ozip_decrypt_decryption">正在解密 Ozip…</string>
 		<string name="ozip_decrypt_finish">Ozip 解密完成！</string>
 		<string name="fastboot_button">Fastboot</string>
@@ -748,27 +742,27 @@
 		<string name="restore_system_context">无法获取 {1} 的默认 context -- Android 可能无法启动。</string>
 		<string name="change_twrp_folder_btn">更改 TWRP 文件夹</string>
 		<string name="change_twrp_folder_on_process">正在更改 TWRP 文件夹</string>
-		<string name="change_twrp_folder_after_process">TWRP文件夹已改为</string>
+		<string name="change_twrp_folder_after_process">TWRP 文件夹已改为</string>
 		<string name="tw_folder_exists">已存在同名文件夹！</string>
 		<string name="unmap_super_devices">取消 Super Devices 映射</string>
 		<string name="unmap_super_devices_confirm">是否取消所有 Super Devices 映射？</string>
-		<string name="unmapping_super_devices">正在取消映射 Super Devices...</string>
+		<string name="unmapping_super_devices">正在取消映射 Super Devices…</string>
 		<string name="unmap_super_devices_complete">取消所有 Super Devices 映射完成！</string>
 		<string name="merges_snapshots">合并快照</string>
 		<string name="merge_snapshots_confirm">是否合并快照？</string>
-		<string name="merging_snapshots">正在合并快照...</string>
+		<string name="merging_snapshots">正在合并快照…</string>
 		<string name="merging_snapshots_complete">合并快照完成！</string>
 		<string name="mount_vab_partitions">在重新启动 TWRP 之前，Super Devices 上的分区可能不会挂载。</string>
-		<string name="restore_pin_password">是否在 PIN码/混合密码 启用时进行恢复？</string>
-		<string name="restore_pattern">是否在 图案密码 启用时恢复？</string>
-		<string name="restore_pin">是否在 PIN码 启用时恢复？</string>
+		<string name="restore_pin_password">是否在 PIN 码/混合密码 启用时进行恢复？</string>
+		<string name="restore_pattern">是否在图案密码启用时恢复？</string>
+		<string name="restore_pin">是否在 PIN 码启用时恢复？</string>
 		<string name="continue_restore_encrypted">是否继续恢复？</string>
-		<string name="restore_with_pin_password1">ROM中的 PIN码/混合密码 已启用</string>
-		<string name="restore_with_pin_password2">恢复前应该在 ROM 中禁用 PIN码/混合密码</string>
-		<string name="restore_with_pin1">ROM中的 PIN码 已启用</string>
-		<string name="restore_with_pin2">恢复前应该在 ROM 中禁用 PIN码</string>
-		<string name="restore_with_pattern1">ROM 中的 图案密码 已启用</string>
-		<string name="restore_with_pattern2">恢复前应该在 ROM 中禁用 图案密码</string>
+		<string name="restore_with_pin_password1">ROM 中的 PIN 码/混合密码已启用</string>
+		<string name="restore_with_pin_password2">恢复前应该在 ROM 中禁用 PIN 码/混合密码</string>
+		<string name="restore_with_pin1">ROM 中的 PIN 码已启用</string>
+		<string name="restore_with_pin2">恢复前应该在 ROM 中禁用 PIN 码</string>
+		<string name="restore_with_pattern1">ROM 中的图案密码已启用</string>
+		<string name="restore_with_pattern2">恢复前应该在 ROM 中禁用图案密码</string>
 		<string name="reboot_after_restore">建议在 Android 首次启动后再重启一次。</string>
 
 		<string name="install_took_seconds_msg">安装耗时 {1} 秒。</string>

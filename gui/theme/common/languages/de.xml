@@ -9,7 +9,6 @@
 		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
-
 		<!-- Partition display names -->
 		<string name="system">System</string>
 		<string name="system_image">System-Image</string>
@@ -31,7 +30,6 @@
 		<string name="adopted_data">Eingegliederte Daten-Partition</string>
 		<string name="adopted_storage">Eingegliederte Storage-Partition</string>
 		<string name="autostorage">Storage-Partition</string>
-
 		<!-- GUI XML strings -->
 		<string name="twrp_header">Team Win Recovery Project</string>
 		<string name="twrp_watch_header">TWRP %tw_version%</string>
@@ -50,7 +48,6 @@
 		<string name="tab_screen">BILDSCHIRM</string>
 		<string name="tab_vibration">VIBRATION</string>
 		<string name="tab_language">SPRACHE</string>
-
 		<string name="install_btn">Installieren</string>
 		<string name="wipe_btn">Löschen</string>
 		<string name="backup_btn">Sichern</string>
@@ -507,7 +504,6 @@
 		<string name="decrypt_user_fail_fbe">Entschlüsselung des Benutzers {1} fehlgeschlagen</string>
 		<string name="decrypt_data_enter_pass_fbe">Passwort für Benutzer [%tw_crypto_user_id%] eingeben</string>
 		<string name="decrypt_data_enter_pattern_fbe">Muster für Benutzer [%tw_crypto_user_id%] eingeben</string>
-
 		<!-- Various console messages - these consist of user displayed messages, oftentimes errors -->
 		<string name="no_kernel_selinux">Dieser Kernel hat keine Leseunterstützung für SELinux-Kontexte.</string>
 		<string name="full_selinux">Volle SELinux-Unterstützung ist vorhanden.</string>

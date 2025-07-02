@@ -9,7 +9,6 @@
 		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
-
 		<!-- Partition display names -->
 		<string name="system">System</string>
 		<string name="system_image">Immagine System</string>
@@ -30,7 +29,6 @@
 		<string name="sdext">SD-EXT</string>
 		<string name="adopted_data">Data annessa</string>
 		<string name="adopted_storage">Archivio annesso</string>
-
 		<!-- GUI XML strings -->
 		<string name="twrp_header">Team Win Recovery Project</string>
 		<string name="twrp_watch_header">TWRP %tw_version%</string>
@@ -49,7 +47,6 @@
 		<string name="tab_screen">SCHERMO</string>
 		<string name="tab_vibration">VIBRAZIONE</string>
 		<string name="tab_language">LINGUA</string>
-
 		<string name="install_btn">Installa</string>
 		<string name="wipe_btn">Pulisci</string>
 		<string name="backup_btn">Backup</string>
@@ -465,7 +462,6 @@
 		<string name="install_cancel">Non installare</string>
 		<string name="sel_storage_list">Scegli archivio</string>
 		<string name="ok_btn">OK</string>
-
 		<!-- Various console messages - these consist of user displayed messages, oftentimes errors -->
 		<string name="no_kernel_selinux">Il kernel non supporta la lettura dei contesti SELinux.</string>
 		<string name="full_selinux">Supporto per SELinux completo presente.</string>

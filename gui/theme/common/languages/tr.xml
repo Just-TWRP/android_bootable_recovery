@@ -9,7 +9,6 @@
 		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="90" />
 		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="90" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
-
 		<!-- Partition display names -->
 		<string name="system">Sistem</string>
 		<string name="system_image">Sistem İmajı</string>
@@ -31,7 +30,6 @@
 		<string name="adopted_data">Kabul Edilen Veri</string>
 		<string name="adopted_storage">Kabul Edilen Depolama</string>
 		<string name="autostorage">Depolama</string>
-
 		<!-- GUI XML strings -->
 		<string name="twrp_header">Team Win Recovery Project</string>
 		<string name="twrp_watch_header">TWRP %tw_version%</string>
@@ -50,7 +48,6 @@
 		<string name="tab_screen">EKRAN</string>
 		<string name="tab_vibration">TİTREŞİM</string>
 		<string name="tab_language">DİL</string>
-
 		<string name="install_btn">Yükle</string>
 		<string name="wipe_btn">Temizle</string>
 		<string name="backup_btn">Yedekle</string>
@@ -467,7 +464,6 @@
 		<string name="install_cancel">Yükleme</string>
 		<string name="sel_storage_list">Depolama Seç</string>
 		<string name="ok_btn">Tamam</string>
-
 		<!-- Various console messages - these consist of user displayed messages, oftentimes errors -->
 		<string name="no_kernel_selinux">Kernel SELinux içeriklerini okuma desteğine sahip değil.</string>
 		<string name="full_selinux">Tam SELinux desteği mevcut.</string>
