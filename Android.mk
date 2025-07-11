@@ -324,7 +324,7 @@ ifeq ($(TW_INCLUDE_CRYPTO), true)
     TW_INCLUDE_CRYPTO_FBE := true
     LOCAL_CFLAGS += -DTW_INCLUDE_FBE
     LOCAL_SHARED_LIBRARIES += android.frameworks.stats@1.0 android.hardware.authsecret@1.0 \
-	android.security.authorization-ndk \
+        android.security.authorization-ndk \
         android.hardware.oemlock@1.0 libf2fs_sparseblock \
         libandroidicu.recovery \
         lib_android_keymaster_keymint_utils \
@@ -353,6 +353,14 @@ ifeq ($(TW_INCLUDE_CRYPTO), true)
             LOCAL_C_INCLUDES += $(TARGET_CRYPTFS_HW_PATH)
         endif
         LOCAL_SHARED_LIBRARIES += libcryptfs_hw
+    endif
+    ifeq ($(TW_INCLUDE_OMAPI), true)
+        LOCAL_CFLAGS += -DTW_INCLUDE_OMAPI
+        LOCAL_SHARED_LIBRARIES += android.hardware.secure_element-V1-ndk android.se.omapi-V1-ndk
+        TWRP_REQUIRED_MODULES += \
+            se_omapi \
+            se_omapi.rc \
+            se_omapi.xml
     endif
     TW_INCLUDE_LIBRESETPROP := true
 endif
