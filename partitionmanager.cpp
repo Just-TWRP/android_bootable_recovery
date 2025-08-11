@@ -58,6 +58,7 @@
 #include <libgsi/libgsi.h>
 #include <liblp/builder.h>
 #include <libsnapshot/snapshot.h>
+#include <libavb_user/libavb_user.h>
 
 #include "variables.h"
 #include "twcommon.h"
@@ -212,58 +213,48 @@ void inline Reset_Prop_From_Partition(std::string prop, std::string def, TWParti
 #define AVB_MAGIC_LEN 4
 #define AVB_VBMETA_FLAGS_OFFSET 123
 
-bool Do_Disable_AVB2(string File_Name, char Disable_Flags, bool Display_Info) {
-	char AVB_MAGIC_BUF[AVB_MAGIC_LEN + 1] = {0}, flags_buf[1] = {0};
-	int _ret;
-	bool ret = false;
-	string dev = "/dev/block/bootdevice/by-name/";
-
-	FILE *vbmetaFile = fopen((dev + File_Name).c_str(), "rb+");
-	if (vbmetaFile != NULL) {
-		fread(&AVB_MAGIC_BUF, AVB_MAGIC_LEN, 1, vbmetaFile);
-		if(strncmp(AVB_MAGIC, AVB_MAGIC_BUF, AVB_MAGIC_LEN) != 0) goto exit;
-		fseek(vbmetaFile, AVB_VBMETA_FLAGS_OFFSET, SEEK_SET);
-		_ret = fread(&flags_buf, 1, 1, vbmetaFile);
-		if(!_ret) goto exit;
-		if (flags_buf[0] != Disable_Flags) {
-			fseek(vbmetaFile, AVB_VBMETA_FLAGS_OFFSET, SEEK_SET);
-			_ret = fwrite(&Disable_Flags, 1, 1, vbmetaFile);
-			if(!_ret) goto exit;
+static bool Do_Disable_AVB2(const std::string& ab_suffix,
+							bool disable_verity,
+							bool disable_verification,
+							bool Display_Info) {				
+	std::string vbmeta_part = "vbmeta";
+	if (!ab_suffix.empty()) vbmeta_part += ab_suffix;
+	AvbOps* ops = avb_ops_user_new();
+	if (!ops) {
+		if (Display_Info) gui_msg(Msg(msg::kError, "disable_avb2_fail_msg=Disable AVB2.0: processing '{1}' failed!")(vbmeta_part));
+		return false;
+	}
+	bool ok = true;
+	if (disable_verity) {
+		if (!avb_user_verity_set(ops, ab_suffix.c_str(), false)) {
+			ok = false; if (Display_Info) gui_msg(Msg(msg::kError, "disable_avb2_fail_msg=Disable AVB2.0: processing '{1}' failed!")(vbmeta_part));
 		}
-		ret = true;
 	}
-
-exit:
-	if (vbmetaFile) {
-		fclose(vbmetaFile);
-		vbmetaFile = nullptr;
+	if (disable_verification) {
+		if (!avb_user_verification_set(ops, ab_suffix.c_str(), false)) {
+			ok = false; if (Display_Info) gui_msg(Msg(msg::kError, "disable_avb2_fail_msg=Disable AVB2.0: processing '{1}' failed!")(vbmeta_part));
+		}
 	}
-	if (Display_Info) {
-		auto msg = ret ? Msg(msg::kHighlight, "disable_avb2_success_msg=Disable AVB2.0: processing '{1}' successfully.")(File_Name)
-						: Msg(msg::kError, "disable_avb2_fail_msg=Disable AVB2.0: processing '{1}' failed!")(File_Name);
-		gui_msg(msg);
+	if (ok && Display_Info) {
+		gui_msg(Msg(msg::kHighlight, "disable_avb2_success_msg=Disable AVB2.0: processing '{1}' successfully.")(vbmeta_part));
 	}
-	return ret;
+	avb_ops_user_free(ops);
+	return ok;
 }
 
 bool TWPartitionManager::Disable_AVB2(bool Display_Info) {
-#ifndef TW_AVB_VBMETA_FLAGS_ALL_DISABLED
-	char disable_flags = AVB_VBMETA_IMAGE_FLAGS_HASHTREE_DISABLED;
+	bool disable_verity = true;
+#ifdef TW_AVB_VBMETA_FLAGS_ALL_DISABLED
+	bool disable_verification = true;
 #else
-	char disable_flags = AVB_VBMETA_IMAGE_FLAGS_HASHTREE_DISABLED |
-		AVB_VBMETA_IMAGE_FLAGS_VERIFICATION_DISABLED;
+	bool disable_verification = false;
 #endif
-
 #ifdef AB_OTA_UPDATER
-	bool r1 = Do_Disable_AVB2("vbmeta_a", disable_flags, Display_Info);
-	bool r2 = Do_Disable_AVB2("vbmeta_system_a", disable_flags, Display_Info);
-	bool r3 = Do_Disable_AVB2("vbmeta_b", disable_flags, Display_Info);
-	bool r4 = Do_Disable_AVB2("vbmeta_system_b", disable_flags, Display_Info);
-	return r1 && r2 && r3 && r4;
+	bool ok_a = Do_Disable_AVB2("_a", disable_verity, disable_verification, Display_Info);
+	bool ok_b = Do_Disable_AVB2("_b", disable_verity, disable_verification, Display_Info);
+	return ok_a && ok_b;
 #else
-	bool r1 = Do_Disable_AVB2("vbmeta", disable_flags, Display_Info);
-	bool r2 = Do_Disable_AVB2("vbmeta_system", disable_flags, Display_Info);
-	return r1 && r2;
+	return Do_Disable_AVB2("", disable_verity, disable_verification, Display_Info);
 #endif
 }
 

@@ -58,7 +58,7 @@ else
     LOCAL_CFLAGS += -DTW_EXCLUDE_APEX
 endif
 
-LOCAL_STATIC_LIBRARIES += libavb \
+LOCAL_STATIC_LIBRARIES += libavb_user \
                           libhealthhalutils \
                           libhealthshim \
                           libinit \
